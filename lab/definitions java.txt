@@ -1,0 +1,32 @@
+CONSTRUCTOR:
+     constructor is a special member function used to initialize objects.it has same name of class.
+CONSTRUCTOR OVERLOADING:
+    constructor overloading is the ability or concept to define multiple methods with same name but different type of parameters or order of parameters.
+METHOD OVERLOADING:
+      method overloading is the ability or concept to define multiple methods with same name but different type of parameters or order of parameters.
+METHOD OVERRIDING:
+    method overriding occurs when a subclass provides a specific implementation of a method which is already defined in its superclass.
+OR the process of changing the definition of a method which is already defined in base class.
+INHERITANCE:
+   inheritance is  a process by which one class acquires properties and methods of another class.
+or process of deriving a class from another class.
+GARBAGE COLLECTOR:
+   garbage collector is a process that running continuosly in background to identify unused objects and destroy them to free up memory.
+ARRAY:
+  homogenous collection of elements
+int arr[]=new int[n];
+
+ABSTRACT METHOD:
+    An abstract method is a method that is declared but does not have an implementation in the class where it is declared.
+ABSTARCT CLASS:
+    A class is said to be abstract class if it has atleast one abstract class.It cannot be instantiated.
+SUPER:
+    it is used to refer to the superclass of a class.it can be used to call the constructor,method,variableof superclass.
+INTERFACE:
+    it is a collection of abstract methods.
+EXCEPTION:
+      An unwanted event that disturbs the flow of execution of a normal program.
+DYNAMIC METHOD DISPATCH OR RUNTIME POLYMORPHISM:
+       Single parent class object will store different child class instances at different times.
+PACKAGE:
+     collection of functions,classes,interfaces

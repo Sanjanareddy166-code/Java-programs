@@ -1,0 +1,548 @@
+/*import java.util.*;
+class Quadraticroots
+{
+public static void main(String args[])
+{
+ Scanner sc=new Scanner(System.in);
+ double root1,root2,d;
+ System.out.println("enter a");
+int a=sc.nextInt();
+System.out.println("enter b");
+int b=sc.nextInt();
+System.out.println("enter c");
+int c=sc.nextInt();
+System.out.println("given quadratic equation is"+ a +"x^2 + " +b +"x +" +c);
+d=b*b-4*a*c;
+if(d>0)
+{
+ System.out.println("roots are real and unequal");
+ root1=(-b+Math.sqrt(d))/(2*a);
+ root2=(b+Math.sqrt(d))/(2*a);
+ System.out.println("root 1 is:"+root1);
+ System.out.println("root 2 is:"+root2);
+}
+else if(d==0)
+{
+  System.out.println("roots are real and equal");
+  root1=(-b+Math.sqrt(d))/(2*a);
+  System.out.println("root 1 is:"+root1);
+}
+else
+{
+ System.out.println("roots are imaginary");
+}
+}
+}*/
+
+//method overloading
+/*import java.util.*;
+class  Method
+{
+ void max(int a,int b)
+ {
+  if(a>b)
+      System.out.println(a +"is greater ");
+  else
+      System.out.println(b +"is greater");
+ }
+
+  void max(double  a,double  b)
+ {
+  if(a>b)
+      System.out.println(a +"is greater ");
+  else
+      System.out.println(b +"is greater");
+ }
+ void max(float a,int b)
+ {
+  if(a>b)
+      System.out.println(a +"is greater ");
+  else
+      System.out.println(b +"is greater");
+ }
+}
+class Main
+{
+public static void main(String args[])
+{
+ Method m=new Method();
+ m.max(2,3);
+ m.max(233.22,323.32);
+ m.max(23.3f,45);
+}
+}*/
+
+
+//class,methods implementation
+/*import java.util.*;
+class Circlearea
+{
+ Scanner sc=new Scanner(System.in);
+ double radius=sc.nextDouble();
+ double a;
+ void area()
+ {
+   a=3.14*radius*radius;
+   System.out.println(a);
+ }
+}
+class Main
+{
+ public static void main(String args[])
+ {
+   Circlearea c=new Circlearea();
+   c.area();
+  }
+}
+*/
+
+//single inheritance
+
+/*class Base
+{
+int a=10;
+}
+class Derived extends Base
+{
+ int b=20;
+  void add()
+  {
+    System.out.println(a+b);
+   }
+}
+class Main
+{
+ public static void main(String args[])
+ {
+   Derived d=new Derived();
+   d.add();
+ }
+}*/
+
+
+//multilevel inheritance
+/*class Grandparent
+{
+int a;
+}
+class Parent extends Grandparent
+{
+int b;
+}
+class Child extends Parent
+{
+ int c;
+ Child()
+ {
+  a=10;
+  b=20;
+  c=2;
+ }
+ void add()
+ {
+   System.out.println(a+b+c);
+ }
+}
+class Main
+{
+public static void main(String args[])
+{
+  Child c=new Child();
+  c.add();
+}
+}*/
+
+//super
+/*class Base
+{
+ int a=20;
+}
+class Derived extends Base
+{
+ int a=10;
+ void display()
+ {
+  System.out.println("child class a is"+a);
+  System.out.println("base class a is "+super.a);
+ }
+}
+class Main
+{
+public static void main(String args[])
+{
+ Derived b=new Derived();
+ b.display();
+}
+}*/
+
+//abstract class
+/*import java.util.Scanner;
+
+abstract class Shape {
+	abstract double area();
+  }
+
+class Rectangle extends Shape {
+    	double dim1;
+	double dim2;
+       	Rectangle(double a, double b) {
+		dim1=a;
+		dim2 = b;
+           }
+       double area() {
+          	return dim1 * dim2;
+           }
+    }
+
+class Triangle extends Shape {
+   	 double dim1;
+    	 double dim2;
+         Triangle(double a, double b) {
+	       	 dim1 = a;
+               	 dim2 = b;
+            }
+         double area() {
+	        return dim1 * dim2 / 2;
+            }
+    }
+
+class Ellipse extends Shape {
+         double dim1;
+         double dim2;
+         Ellipse(double a, double b) {
+	       	 dim1 = a;
+        	 dim2 = b;
+            }
+         double area() {
+	        return Math.PI*dim1 * dim2;
+            }
+    }
+
+class Area  {
+       public static void main(String args[]) {
+	Scanner sc= new Scanner(System.in);
+	int ch;
+	do  {
+	   System.out.println("1. RECTANGLE");
+	   System.out.println("2. TRIANGLE");
+	   System.out.println("3. ELLIPSE");
+	   System.out.println("Enter your choice: ");
+	
+	   ch = sc.nextInt( );
+	   switch(ch)  {
+ 	         case 1:
+			System.out.println("enter two dimensions for area of a rectangle ");
+			double a = sc.nextDouble( );
+			double b = sc.nextDouble( );
+			Rectangle d1= new Rectangle(a,b);
+			System.out.println("area of rectangle is "+ d1.area( ));
+			break;
+	         case 2:
+			System.out.println("enter two dimensions for area of a triangle ");
+			double c = sc.nextDouble( );
+			double d = sc.nextDouble( );
+			Triangle d2= new Triangle(c,d);
+			System.out.println("area of triangle is "+ d2.area( ));
+			break;
+	         case 3:
+			System.out.println("enter two dimensions for area of a elllipse ");
+			double e = sc.nextDouble( );
+			double f = sc.nextDouble( );
+			Ellipse d3= new Ellipse(e,f);
+			System.out.println("area of ellipse is "+ d3.area( ));
+			break;
+	       default:
+			System.out.println("enter correct choice from 1 to 3");
+	 		break;
+	         }
+         	System.out.println("press 1 to continue or 0 to exit:");
+		ch = sc.nextInt( );
+	} while(ch == 1);
+     }
+ }
+*/
+
+//interface
+
+/*interface vehicleone
+{
+ int speed=90;
+ public void distance();
+}
+interface vehicletwo
+{
+ int distance=100;
+ public void speed();
+}
+class Vehicle implements vehicleone,vehicletwo
+{
+ public void distance()
+ {
+   int distance=speed*100;
+   System.out.println(distance);
+ }
+public void speed()
+{
+ int speed=distance/100;
+ System.out.println(speed);
+}
+}
+class Main
+{
+public static void main(String args[])
+{
+ Vehicle v=new Vehicle();
+ v.distance();
+ v.speed();
+}
+}*/
+
+//exception handling
+
+/*import java.util.*;
+class Exception1
+{
+ public static void main(String args[])
+ {
+  int x,y,z=0;
+  Scanner sc=new Scanner(System.in);
+  x=sc.nextInt();
+  y=sc.nextInt();
+  try
+  {
+   z=x/y;
+   System.out.println(z);
+  }
+  catch(Exception e)
+  {
+    System.out.println(e);
+   }
+}
+}
+*/
+//multicatch
+
+/*import java.util.*;
+class Multicatch
+{
+public static void main(String args[])
+{
+try
+{
+ int x,y,z=0;
+Scanner sc=new Scanner(System.in);
+ x=sc.nextInt();
+ y=sc.nextInt();
+ z=x/y;
+ System.out.println(z);
+ int b[]={10,20,30};
+ b[50]=100;
+ }
+catch(ArithmeticException ae)
+{
+   System.out.println(ae);
+}
+catch(ArrayIndexOutOfBoundsException ai)
+{
+   System.out.println(ai);
+}
+catch(Exception e)
+{
+   System.out.println(e);
+}
+}
+}*/
+
+//throw used to throw exception manually
+
+/*import java.util.*;
+class Thexception
+{
+ public static void main(String args[])
+ {
+  Scanner sc=new Scanner(System.in);
+  int age=sc.nextInt();
+  try
+  {
+   if(age<18)
+      throw new ArithmeticException("u are not adult");
+   else
+     System.out.println("u are eligible");
+  }
+  catch(ArithmeticException ae)
+  {
+   System.out.println(ae);
+  }
+}
+}*/
+
+//finally
+/*import java.util.*;
+class Finallyex
+{
+ public static void main(String args[])
+ {
+  try
+  {
+   Scanner sc=new Scanner(System.in);
+   int x=sc.nextInt();
+   int y=sc.nextInt();
+   int z;
+   z=x/y;
+   System.out.println(z);
+  }
+  catch(ArithmeticException a)
+  {
+    System.out.println(a);
+  }
+  finally
+   {
+      System.out.println("it will be printed whether exception is raised or not");
+    }
+}
+}*/
+
+//userdfined exceptions
+
+import java.util.*;
+class TooYoungException extends Exception
+{
+ public TooYoungException()
+  {
+   super();
+   }
+ public TooYoungException(String msg)
+  {
+   super(msg);
+   }
+
+}
+class Voting
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int age;
+ try
+{
+//Scanner sc=new Scanner(System.in);
+age=sc.nextInt();
+if(age<18)
+   throw new TooYoungException("you are not eligible");
+else
+    System.out.println("eligble");
+}
+catch(TooYoungException ty)
+{
+ System.out.println(ty);
+}
+}
+}
+
+//runtime 
+
+abstract class Vehicle
+{
+ public abstract int getnowheels();
+ public abstract int seatingcapacity();
+}
+class Bike extends Vehicle
+{
+ public int getnowheels()
+ {
+  return 2;
+  }
+  public int seatingcapacity()
+{
+ return 2;
+ } 
+}
+class Auto extends Vehicle
+{
+ public int getnowheels()
+ {
+  return 3;
+ }
+ public int seatingcapacity()
+{
+ return 4;
+ }
+}
+class Car extends Vehicle
+ {
+ public int getnowheels()
+ {
+ return 4;
+ }
+ public int seatingcapacity()
+ {
+ return 5;
+ }
+}
+class Mainclass
+{
+public static void main(String args[])
+{
+Vehicle v;//reference variable
+int w,c;
+
+v=new Bike();
+System.out.println("bike");
+w=v.getnowheels(); 
+c=v.seatingcapacity();
+System.out.println("no of wheels"+w);
+System.out.println("seating capacity"+c);
+
+
+v=new Auto();
+System.out.println("auto");
+w=v.getnowheels();
+c=v.seatingcapacity();
+System.out.println("no of wheels"+w);
+System.out.println("seating capacity"+c);
+
+v=new Car();
+System.out.println("car");
+w=v.getnowheels();
+c=v.seatingcapacity();
+System.out.println("no of wheels"+w);
+System.out.println("seatingcapacity"+c);
+
+}
+}
+
+//join
+class Mythread extends Thread
+{
+ public void run()
+ {
+  for(int i=0;i<5;i++)
+  {
+    System.out.println("sita thread");
+    try
+    {
+      Thread.sleep(2000);
+     }
+    catch(InterruptedException ie)
+    {
+      System.out.println(ie);
+    }
+   }
+}
+
+}
+class Main
+{
+ public static void main(String args[]) throws InterruptedException
+ {
+  Mythread t=new Mythread();
+  t.start();
+  t.join();
+  for(int i=0;i<5;i++)
+  {
+     System.out.println("rama thread");
+   }
+}
+}
+
+   
